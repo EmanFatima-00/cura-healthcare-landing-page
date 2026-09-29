@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cura - Healthcare Management Made Human</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#fdfdfc;color:#111827}
+h1,h2,h3{font-family:'Sora',sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#fff;border-bottom:1px solid #f0f0f0;position:sticky;top:0;z-index:99}
+.logo{font-family:'Sora';font-weight:800;font-size:26px} .logo b{color:#0e9f6e}
+.menu{display:flex;gap:28px;list-style:none} .menu a{text-decoration:none;color:#6b7280;font-weight:500;font-size:14px}
+.menu a:hover{color:#111827}
+.btn{background:#111827;color:#fff;padding:12px 22px;border-radius:100px;text-decoration:none;font-weight:600;font-size:14px;transition:.3s;display:inline-block}
+.btn:hover{background:#0e9f6e;transform:translateY(-2px)}
+.hero{display:grid;grid-template-columns:1.1fr 0.9fr;padding:60px 7%;gap:50px;align-items:center}
+.hero h1{font-size:56px;line-height:0.95;letter-spacing:-2px;margin-bottom:20px}
+.hero h1 i{font-style:normal;color:#0e9f6e}
+.hero p{color:#6b7280;font-size:17px;line-height:1.7;margin-bottom:32px;max-width:500px}
+.hero-img{position:relative} .hero-img img{width:100%;border-radius:24px;object-fit:cover;height:500px}
+.badge{position:absolute;bottom:20px;left:20px;background:#fff;padding:16px 18px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);display:flex;gap:12px;align-items:center}
+.dot{width:10px;height:10px;background:#0e9f6e;border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(14,159,110,.7)}70%{box-shadow:0 0 0 10px rgba(14,159,110,0)}100%{box-shadow:0 0 0 0 rgba(14,159,110,0)}}
+.intro{padding:30px 7% 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.intro div{background:#f6f7f4;padding:28px;border-radius:20px}
+.intro h3{margin-bottom:8px} .intro p{color:#6b7280;font-size:14px}
+.features{padding:80px 7%;background:#111827;color:#fff;border-radius:32px;margin:0 2%}
+.feat-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:50px;flex-wrap:wrap;gap:20px}
+.feat-head h2{font-size:40px;line-height:1} .feat-head p{color:#9ca3af;max-width:400px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#1f2937;border:1px solid #2a3441;padding:28px;border-radius:20px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#0e9f6e}
+.card span{font-size:28px} .card h3{margin:18px 0 10px} .card p{color:#9ca3af;font-size:14px;line-height:1.6}
+.benefit{padding:90px 7%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.benefit h2{font-size:42px;line-height:1.1;margin-bottom:20px}
+.list{list-style:none;margin-top:25px} .list li{padding:16px 0;border-bottom:1px solid #eee;display:flex;gap:14px;font-weight:500}
+.list li em{font-style:normal;background:#e7f7f0;color:#0e9f6e;width:26px;height:26px;display:grid;place-items:center;border-radius:50%;font-size:12px;font-weight:800}
+.testi{padding:0 7% 80px;text-align:center}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;text-align:left}
+.t{background:#fff;border:1px solid #eee;padding:24px;border-radius:20px}
+.t p{font-size:14px;color:#374151;line-height:1.7;margin-bottom:20px}
+.u{display:flex;gap:12px;align-items:center} .u img{width:38px;height:38px;border-radius:50%}
+.cta{margin:0 7%;background:#e7f7f0;border-radius:32px;padding:80px 40px;text-align:center}
+.cta h2{font-size:44px;margin-bottom:12px} .cta p{color:#6b7280;margin-bottom:28px}
+.faq{max-width:800px;margin:80px auto;padding:0 7%}
+.faq h2{text-align:center;font-size:36px;margin-bottom:40px}
+.f-item{border-bottom:1px solid #eee;padding:20px 0;cursor:pointer}
+.f-item div{display:flex;justify-content:space-between;font-weight:600}
+.f-item p{display:none;color:#6b7280;font-size:14px;margin-top:10px;line-height:1.6}
+.f-item.open p{display:block}
+footer{padding:60px 7% 30px;background:#fff;border-top:1px solid #eee;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;color:#6b7280;font-size:14px}
+@media(max-width:850px){.hero,.benefit,.grid,.t-grid,.intro{grid-template-columns:1fr} .hero h1{font-size:38px} .feat-head h2,.benefit h2,.cta h2{font-size:32px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">Cura<b>.</b></div><ul class="menu"><li><a href="#features">Features</a></li><li><a href="#benefit">Benefits</a></li><li><a href="#reviews">Reviews</a></li></ul><a href="#cta" class="btn">Start Free Trial</a></nav>
+
+<section class="hero">
+<div><h1>Healthcare management that feels <i>human.</i></h1><p>Cura is built for clinics who are tired of messy paperwork. Manage patients, appointments, and billing in one calm dashboard.</p><div style="display:flex;gap:12px"><a href="#" class="btn">Start Free Trial</a><a href="#features" style="padding:12px 22px;border:1px solid #ddd;border-radius:100px;text-decoration:none;color:#111;font-weight:600;font-size:14px">How it works</a></div></div>
+<div class="hero-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800"><div class="badge"><div class="dot"></div><div><b style="font-size:13px">Live: 12 appointments today</b><br><span style="font-size:12px;color:#6b7280">System is running smoothly</span></div></div></div>
+</section>
+
+<div class="intro">
+<div><h3>For Doctors</h3><p>Write prescriptions in 30 seconds, see patient history instantly.</p></div>
+<div><h3>For Patients</h3><p>Book online, get reminders, and access reports from phone.</p></div>
+<div><h3>For Clinics</h3><p>Track revenue, staff, and inventory without Excel sheets.</p></div>
+</div>
+
+<section class="features" id="features">
+<div class="feat-head"><h2>Built for real clinics,<br>not just software demos.</h2><p>No complicated training. Cura is designed with real doctors from Lahore and Karachi.</p></div>
+<div class="grid">
+<div class="card"><span>📅</span><h3>Smart Appointments</h3><p>Auto-reminders via SMS & WhatsApp. Reduce no-shows by 70%.</p></div>
+<div class="card"><span>📝</span><h3>EMR in 30 Seconds</h3><p>Voice-to-text prescriptions and templates for common cases.</p></div>
+<div class="card"><span>💳</span><h3>Billing Made Easy</h3><p>Generate bills, manage claims, and track payments automatically.</p></div>
+<div class="card"><span>📊</span><h3>Clinic Analytics</h3><p>See which doctor performs best, daily income, peak hours.</p></div>
+<div class="card"><span>🔒</span><h3>100% Secure & Private</h3><p>HIPAA compliant, data encrypted. Hosted in Pakistan.</p></div>
+<div class="card"><span>📱</span><h3>Patient App Included</h3><p>Your patients get a free app to book and view reports.</p></div>
+</div>
+</section>
+
+<section class="benefit" id="benefit">
+<div><h2>Why 300+ clinics switched to Cura last year</h2><p style="color:#6b7280">We interviewed clinic owners who left old systems. They all said the same thing - we need something simple.</p><ul class="list"><li><em>✓</em> Save 3 hours daily on admin work</li><li><em>✓</em> 70% less patient no-shows</li><li><em>✓</em> Setup in one day, no IT team needed</li><li><em>✓</em> Works even with slow internet</li></ul></div>
+<div><img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=700" style="width:100%;border-radius:24px"></div>
+</section>
+
+<section class="testi" id="reviews">
+<h2 style="font-size:36px">Clinics love Cura</h2>
+<div class="t-grid">
+<div class="t"><p>"We were using paper files for 10 years. Cura team migrated everything in 1 day. Now my receptionist loves her job."</p><div class="u"><img src="https://i.pravatar.cc/100?img=32"><div><b>Dr. Sana Malik</b><br><span style="color:#6b7280;font-size:12px">Sana Clinic, Faisalabad</span></div></div></div>
+<div class="t"><p>"The WhatsApp reminder feature alone saved us. Patients actually come now. Revenue increased by 40%."</p><div class="u"><img src="https://i.pravatar.cc/100?img=15"><div><b>Dr. Ahmed Raza</b><br><span style="color:#6b7280;font-size:12px">Raza Hospital, Lahore</span></div></div></div>
+<div class="t"><p>"Simple, fast, and in Urdu + English. My staff learned it in 2 hours. Best decision."</p><div class="u"><img src="https://i.pravatar.cc/100?img=8"><div><b>Dr. Fatima Noor</b><br><span style="color:#6b7280;font-size:12px">Noor Medical, Islamabad</span></div></div></div>
+</div>
+</section>
+
+<div class="cta" id="cta"><h2>Start your clinic's new chapter today</h2><p>14-day free trial. No credit card. Cancel anytime.</p><a href="#" class="btn">Get Started - It's Free</a><p style="margin-top:12px;font-size:12px">✓ Used by 300+ clinics in Pakistan</p></div>
+
+<section class="faq"><h2>Common Questions</h2>
+<div class="f-item"><div>Is Cura suitable for small clinics? <span>+</span></div><p>Yes, Cura is made for 1-5 doctor clinics. Pricing starts from Rs. 3000/month. You don't need big hospital software.</p></div>
+<div class="f-item"><div>Do you provide data migration? <span>+</span></div><p>Yes, our team will migrate your old Excel/paper data for free during onboarding.</p></div>
+<div class="f-item"><div>Does it work offline? <span>+</span></div><p>Yes, Cura works on slow internet and saves data offline, then syncs when online.</p></div>
+<div class="f-item"><div>Can I cancel anytime? <span>+</span></div><p>Yes, no lock-in. You own your data and can export anytime.</p></div>
+</section>
+
+<footer><div><div class="logo">Cura<b>.</b></div><p style="max-width:300px;margin-top:10px">Healthcare software that feels human. Made for Pakistani clinics.</p></div><div><b style="color:#111">Product</b><br><br>Features<br>Pricing<br>Security</div><div><b style="color:#111">Company</b><br><br>About<br>Careers<br>Contact</div><div>© 2026 Cura. Built by Eman Fatima</div></footer>
+
+<script>
+document.querySelectorAll('.f-item').forEach(i=>{i.addEventListener('click',()=>i.classList.toggle('open'))})
+</script>
+</body>
+</html>
